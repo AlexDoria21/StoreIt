@@ -1,9 +1,7 @@
-
-
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-3xl text-brand">
+    <div className="flex-center h-screen ">
+      <h1 className="h1">
         LockedIt - Secure Your Files with Confidence.
       </h1>
     </div>
