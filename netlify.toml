@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Plugin oficial de Netlify para Next.js (App Router + Server Actions).
+# Convierte las rutas dinámicas y Server Actions en funciones serverless.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
