@@ -20,10 +20,10 @@ import { calculatePercentage, convertFileSize } from "@/lib/utils";
 
 const chartConfig = {
   size: {
-    label: "Size",
+    label: "Tamaño",
   },
   used: {
-    label: "Used",
+    label: "Usado",
     color: "white",
   },
 } satisfies ChartConfig;
@@ -78,7 +78,7 @@ export const Chart = ({ used = 0 }: { used: number }) => {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-white/70"
                         >
-                          Space used
+                          Espacio usado
                         </tspan>
                       </text>
                     );
@@ -90,7 +90,7 @@ export const Chart = ({ used = 0 }: { used: number }) => {
         </ChartContainer>
       </CardContent>
       <CardHeader className="chart-details">
-        <CardTitle className="chart-title">Available Storage</CardTitle>
+        <CardTitle className="chart-title">Almacenamiento disponible</CardTitle>
         <CardDescription className="chart-description">
           {used ? convertFileSize(used) : "2GB"} / 2GB
         </CardDescription>

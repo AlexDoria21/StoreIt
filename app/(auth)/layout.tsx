@@ -15,9 +15,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           />
 
           <div className="space-y-5 text-white">
-            <h1 className="h1">Manage your files the best way</h1>
+            <h1 className="h1">Gestiona tus archivos de la mejor manera</h1>
             <p className="body-1">
-              This is a place where you can store all your documents.
+              Este es un lugar donde puedes almacenar todos tus documentos.
             </p>
           </div>
           <Image

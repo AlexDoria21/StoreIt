@@ -36,8 +36,8 @@ const FileUploader = ({ ownerId, accountId, className }: Props) => {
           return toast({
             description: (
               <p className="body-2 text-white">
-                <span className="font-semibold">{file.name}</span> is too large.
-                Max file size is 50MB.
+                <span className="font-semibold">{file.name}</span> es demasiado
+                grande. El tamaño máximo de archivo es 50 MB.
               </p>
             ),
             className: "error-toast",
@@ -80,11 +80,11 @@ const FileUploader = ({ ownerId, accountId, className }: Props) => {
           width={24}
           height={24}
         />{" "}
-        <p>Upload</p>
+        <p>Subir</p>
       </Button>
       {files.length > 0 && (
         <ul className="uploader-preview-list">
-          <h4 className="h4 text-light-100">Uploading</h4>
+          <h4 className="h4 text-light-100">Subiendo</h4>
 
           {files.map((file, index) => {
             const { type, extension } = getFileType(file.name);

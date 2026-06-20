@@ -29,10 +29,13 @@ export const FileDetails = ({ file }: { file: Models.Document }) => {
     <>
       <ImageThumbnail file={file} />
       <div className="space-y-4 px-2 pt-2">
-        <DetailRow label="Format:" value={file.extension} />
-        <DetailRow label="Size:" value={convertFileSize(file.size)} />
-        <DetailRow label="Owner:" value={file.owner.fullName} />
-        <DetailRow label="Last edit:" value={formatDateTime(file.$updatedAt)} />
+        <DetailRow label="Formato:" value={file.extension} />
+        <DetailRow label="Tamaño:" value={convertFileSize(file.size)} />
+        <DetailRow label="Propietario:" value={file.owner.fullName} />
+        <DetailRow
+          label="Última edición:"
+          value={formatDateTime(file.$updatedAt)}
+        />
       </div>
     </>
   );
@@ -51,19 +54,19 @@ export const ShareInput = ({ file, onInputChange, onRemove }: Props) => {
 
       <div className="share-wrapper">
         <p className="subtitle-2 pl-1 text-light-100">
-          Share file with other users
+          Compartir archivo con otros usuarios
         </p>
         <Input
           type="email"
-          placeholder="Enter email address"
+          placeholder="Ingresa el correo electrónico"
           onChange={(e) => onInputChange(e.target.value.trim().split(","))}
           className="share-input-field"
         />
         <div className="pt-4">
           <div className="flex justify-between">
-            <p className="subtitle-2 text-light-100">Shared with</p>
+            <p className="subtitle-2 text-light-100">Compartido con</p>
             <p className="subtitle-2 text-light-200">
-              {file.users.length} users
+              {file.users.length} usuarios
             </p>
           </div>
 

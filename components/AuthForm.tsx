@@ -61,7 +61,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
 
       setAccountId(user.accountId);
     } catch {
-      setErrorMessage("Failed to create account. Please try again.");
+      setErrorMessage("No se pudo crear la cuenta. Inténtalo de nuevo.");
     } finally {
       setIsLoading(false);
     }
@@ -72,7 +72,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="auth-form">
           <h1 className="form-title">
-            {type === "sign-in" ? "Sign In" : "Sign Up"}
+            {type === "sign-in" ? "Iniciar sesión" : "Registrarse"}
           </h1>
           {type === "sign-up" && (
             <FormField
@@ -81,11 +81,13 @@ const AuthForm = ({ type }: { type: FormType }) => {
               render={({ field }) => (
                 <FormItem>
                   <div className="shad-form-item">
-                    <FormLabel className="shad-form-label">Full Name</FormLabel>
+                    <FormLabel className="shad-form-label">
+                      Nombre completo
+                    </FormLabel>
 
                     <FormControl>
                       <Input
-                        placeholder="Enter your full name"
+                        placeholder="Ingresa tu nombre completo"
                         className="shad-input"
                         {...field}
                       />
@@ -104,11 +106,13 @@ const AuthForm = ({ type }: { type: FormType }) => {
             render={({ field }) => (
               <FormItem>
                 <div className="shad-form-item">
-                  <FormLabel className="shad-form-label">Email</FormLabel>
+                  <FormLabel className="shad-form-label">
+                    Correo electrónico
+                  </FormLabel>
 
                   <FormControl>
                     <Input
-                      placeholder="Enter your email"
+                      placeholder="Ingresa tu correo electrónico"
                       className="shad-input"
                       {...field}
                     />
@@ -125,7 +129,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
             className="form-submit-button"
             disabled={isLoading}
           >
-            {type === "sign-in" ? "Sign In" : "Sign Up"}
+            {type === "sign-in" ? "Iniciar sesión" : "Registrarse"}
 
             {isLoading && (
               <Image
@@ -143,15 +147,15 @@ const AuthForm = ({ type }: { type: FormType }) => {
           <div className="body-2 flex justify-center">
             <p className="text-light-100">
               {type === "sign-in"
-                ? "Don't have an account?"
-                : "Already have an account?"}
+                ? "¿No tienes una cuenta?"
+                : "¿Ya tienes una cuenta?"}
             </p>
             <Link
               href={type === "sign-in" ? "/sign-up" : "/sign-in"}
               className="ml-1 font-medium text-brand"
             >
               {" "}
-              {type === "sign-in" ? "Sign Up" : "Sign In"}
+              {type === "sign-in" ? "Registrarse" : "Iniciar sesión"}
             </Link>
           </div>
         </form>

@@ -110,7 +110,7 @@ const ActionDropdown = ({ file }: { file: Models.Document }) => {
           )}
           {value === "delete" && (
             <p className="delete-confirmation">
-              Are you sure you want to delete{` `}
+              ¿Estás seguro de que quieres eliminar{` `}
               <span className="delete-file-name">{file.name}</span>?
             </p>
           )}
@@ -118,10 +118,10 @@ const ActionDropdown = ({ file }: { file: Models.Document }) => {
         {["rename", "delete", "share"].includes(value) && (
           <DialogFooter className="flex flex-col gap-3 md:flex-row">
             <Button onClick={closeAllModals} className="modal-cancel-button">
-              Cancel
+              Cancelar
             </Button>
             <Button onClick={handleAction} className="modal-submit-button">
-              <p className="capitalize">{value}</p>
+              <p className="capitalize">{label}</p>
               {isLoading && (
                 <Image
                   src="/assets/icons/loader.svg"

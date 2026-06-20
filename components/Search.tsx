@@ -62,7 +62,7 @@ const Search = () => {
         />
         <Input
           value={query}
-          placeholder="Search..."
+          placeholder="Buscar..."
           className="search-input"
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -95,7 +95,7 @@ const Search = () => {
                 </li>
               ))
             ) : (
-              <p className="empty-result">No files found</p>
+              <p className="empty-result">No se encontraron archivos</p>
             )}
           </ul>
         )}
