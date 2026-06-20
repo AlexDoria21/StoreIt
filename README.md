@@ -63,15 +63,6 @@ A modern **file storage & sharing** web app built with **Next.js 15**, **React 1
 |:---:|
 | ![Category](docs/screenshots/category.png) |
 
-<details>
-<summary>How to add screenshots</summary>
-
-1. Run the app locally (`npm run dev`).
-2. Take screenshots of the relevant screens.
-3. Save them in `docs/screenshots/` with the names referenced above (`sign-in.png`, `otp.png`, `dashboard.png`, `upload.png`, `category.png`).
-4. They will appear automatically when viewing this README on GitHub.
-
-</details>
 
 ---
 

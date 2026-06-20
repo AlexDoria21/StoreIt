@@ -63,15 +63,6 @@ Una aplicación web moderna de **almacenamiento y compartición de archivos** co
 |:---:|
 | ![Categoría](docs/screenshots/category.png) |
 
-<details>
-<summary>Cómo añadir capturas</summary>
-
-1. Ejecuta la app en local (`npm run dev`).
-2. Haz capturas de las pantallas relevantes.
-3. Guárdalas en `docs/screenshots/` con los nombres referenciados arriba (`sign-in.png`, `otp.png`, `dashboard.png`, `upload.png`, `category.png`).
-4. Aparecerán automáticamente al ver este README en GitHub.
-
-</details>
 
 ---
 
